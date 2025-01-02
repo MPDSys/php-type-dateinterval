@@ -1,10 +1,9 @@
 # DateInterval
-![Packagist Version](https://img.shields.io/packagist/v/mpd/type-dateinterval)
+[![Packagist Version](https://img.shields.io/packagist/v/mpd/type-dateinterval)](https://packagist.org/packages/mpd/type-dateinterval)
 ![GitHub License](https://img.shields.io/github/license/MPDsys/php-type-dateinterval)
 ![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/mpd/type-dateinterval/php)
 
-Extension of DateInterval class adding ISO 8601 compatibility, while maintaining interoperability
-with php DateInterval
+Extension and drop-in replacement of DateInterval class adding ISO 8601 compatibility and comparators
 ## Installation
  `composer require mpd/type-dateinterval`
  
