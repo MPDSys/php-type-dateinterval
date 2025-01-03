@@ -1,7 +1,7 @@
-# DateInterval
+# type DateInterval
 [![Packagist Version](https://img.shields.io/packagist/v/mpd/type-dateinterval)](https://packagist.org/packages/mpd/type-dateinterval)
-![GitHub License](https://img.shields.io/github/license/MPDsys/php-type-dateinterval)
 ![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/mpd/type-dateinterval/php)
+![GitHub License](https://img.shields.io/github/license/MPDsys/php-type-dateinterval)
 
 Extension and drop-in replacement of DateInterval class adding ISO 8601 compatibility and comparators
 ## Installation
@@ -31,7 +31,10 @@ $date = new DateTime("1970-01-01 00:01:00");
 echo($b->cmpRelative($c, $date)); // 0 (equal)
 $i = new DateInterval("P2DT1S");
 echo($c->cmpRelative($i, $date)); // -1 (c < i)
-echo($i->cmpRelative($c, $date)); //  1 (i > c
+echo($i->cmpRelative($c, $date)); //  1 (i > c)
+
+$date->add($i);
+echo($date->format("Y-m-d H:i:s")); // 1970-01-03 00:01:01
 ```
 
 
@@ -64,7 +67,7 @@ class DateInterval {
 
 ## Notes
 This class is based on php's native DateInterval class, can be used as drop in
-replacement. but also inherits some recommendations like 
+replacement. but also inherits some recommendations/limitations namely 
 "properties should be considered read only". 
 
 ### isExactlyEqual / areExactlyEqual
